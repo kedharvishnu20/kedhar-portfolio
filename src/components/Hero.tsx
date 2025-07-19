@@ -2,6 +2,7 @@ import { ArrowDown, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import heroImage from "@/assets/hero-bg.jpg";
+import bitmojiImage from "/bitmoji.jpg";
 
 const Hero = () => {
   const [showBitmoji, setShowBitmoji] = useState(true);
@@ -63,7 +64,7 @@ const Hero = () => {
             >
               {showBitmoji ? (
                 <img 
-                  src="/bitmoji.jpg" 
+                  src={bitmojiImage} 
                   alt="Kedhar's Bitmoji" 
                   className="w-28 h-28 rounded-full object-cover"
                 />
