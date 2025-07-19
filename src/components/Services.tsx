@@ -10,28 +10,10 @@ const Services = () => {
       features: ["Custom Django Applications", "Database Design & Optimization", "Authentication Systems", "Admin Panel Customization"]
     },
     {
-      icon: <Zap className="h-8 w-8" />,
-      title: "FastAPI Microservices",
-      description: "Modern, fast API development using FastAPI for high-performance microservices and RESTful applications.",
-      features: ["High-Performance APIs", "Async Programming", "Auto Documentation", "Type Hints & Validation"]
-    },
-    {
       icon: <Database className="h-8 w-8" />,
       title: "REST API Design",
       description: "Well-structured, documented APIs following REST principles with proper authentication and error handling.",
       features: ["RESTful Architecture", "API Documentation", "Authentication & Authorization", "Error Handling"]
-    },
-    {
-      icon: <Bot className="h-8 w-8" />,
-      title: "AI Integrations",
-      description: "Integration of AI models and services including LLM APIs, chatbots, and machine learning solutions.",
-      features: ["LLM API Integration", "Gemini & Meta LLaMA", "Custom AI Workflows", "Data Processing"]
-    },
-    {
-      icon: <Code className="h-8 w-8" />,
-      title: "Document-based Chatbots",
-      description: "RAG (Retrieval Augmented Generation) implementation for intelligent document-based question answering systems.",
-      features: ["RAG Implementation", "Vector Search (FAISS)", "Document Processing", "Conversational AI"]
     },
     {
       icon: <Globe className="h-8 w-8" />,
