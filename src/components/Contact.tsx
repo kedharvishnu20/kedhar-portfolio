@@ -29,13 +29,13 @@ const Contact = () => {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
       value: "GitHub Profile",
-      href: "#"
+      href: "https://github.com/kedharvishnu20"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
       value: "LinkedIn Profile",
-      href: "#"
+      href: "https://www.linkedin.com/in/kedhar-vishnu-buddepu-687499259/"
     }
   ];
 
@@ -95,27 +95,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-8 tech-card p-6">
-              <h4 className="text-lg font-semibold mb-4">Available For</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Backend Development Projects
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  AI Integration Consulting
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Freelance Opportunities
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Technical Collaboration
-                </li>
-              </ul>
-            </div>
+            
           </div>
 
           {/* Contact Form */}

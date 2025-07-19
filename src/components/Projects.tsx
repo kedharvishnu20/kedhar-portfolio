@@ -16,9 +16,9 @@ const Projects = () => {
         "Real-time Chat Interface"
       ],
       icon: <Bot className="h-8 w-8" />,
-      githubUrl: "#",
+      githubUrl: "https://github.com/kedharvishnu20/RagBot",
       demoUrl: "#",
-      status: "Completed"
+      status: "Completed - Not Deployed"
     },
     {
       title: "Volume and Brightness Control",
@@ -28,13 +28,12 @@ const Projects = () => {
         "Hand Gesture Recognition",
         "Real-time Volume Control",
         "Brightness Adjustment",
-        "Streamlit Web Interface",
-        "Cross-platform Support"
+        "Streamlit Web Interface"
       ],
       icon: <Hand className="h-8 w-8" />,
-      githubUrl: "#",
+      githubUrl: "https://github.com/kedharvishnu20/gesture_control",
       demoUrl: "#",
-      status: "Completed"
+      status: "Completed - Not Deployed"
     }
   ];
 
@@ -116,7 +115,7 @@ const Projects = () => {
                     onClick={() => window.open(project.demoUrl, '_blank')}
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
+                    Live Demo - Not Deployed Yet
                   </Button>
                 </div>
               </CardContent>

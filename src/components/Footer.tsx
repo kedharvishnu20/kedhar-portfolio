@@ -6,8 +6,8 @@ const Footer = () => {
   const socialLinks = [
     { icon: <Mail className="h-5 w-5" />, href: "mailto:kedharvishnu1926@gmail.com", label: "Email" },
     { icon: <Phone className="h-5 w-5" />, href: "tel:+919398887913", label: "Phone" },
-    { icon: <Github className="h-5 w-5" />, href: "#", label: "GitHub" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/kedharvishnu20", label: "GitHub" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://linkedin.com/in/kedhar-vishnu-buddepu", label: "LinkedIn" },
   ];
 
   const scrollToTop = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
               Kedhar Vishnu Buddepu
             </button>
             <p className="text-muted-foreground mt-2">
-              Backend Developer | AI Enthusiast | FastAPI Explorer
+              Backend Developer 
             </p>
           </div>
 

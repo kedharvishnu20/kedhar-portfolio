@@ -1,8 +1,23 @@
 import { ArrowDown, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const [showBitmoji, setShowBitmoji] = useState(true);
+  const [isRotating, setIsRotating] = useState(false);
+
+  const handleProfileClick = () => {
+    if (isRotating) return; // Prevent multiple clicks during animation
+    
+    setIsRotating(true);
+    
+    // After rotation animation completes (500ms), toggle the content
+    setTimeout(() => {
+      setShowBitmoji(!showBitmoji);
+      setIsRotating(false);
+    }, 250); // Half of the rotation duration
+  };
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -37,10 +52,25 @@ const Hero = () => {
       <div className="absolute top-1/3 right-20 w-12 h-12 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Profile Picture Placeholder */}
-        <div className="mb-8 flex justify-center">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-primary/50 flex items-center justify-center tech-glow animate-glow">
-            <span className="text-4xl font-bold text-primary-foreground">KVB</span>
+        {/* Profile Picture */}
+        <div className="mb-8 flex justify-center profile-container">
+          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-primary/50 cursor-pointer transition-all duration-300 hover:scale-105">
+            <div 
+              className={`w-full h-full rounded-full flex items-center justify-center ${
+                isRotating ? 'profile-rotate' : ''
+              }`}
+              onClick={handleProfileClick}
+            >
+              {showBitmoji ? (
+                <img 
+                  src="public/bitmoji.jpg" 
+                  alt="Kedhar's Bitmoji" 
+                  className="w-28 h-28 rounded-full object-cover"
+                />
+              ) : (
+                <span className="text-4xl font-bold text-primary-foreground">KVB</span>
+              )}
+            </div>
           </div>
         </div>
 
@@ -50,7 +80,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-          Backend Developer | AI Enthusiast | FastAPI Explorer
+          Backend Developer
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
@@ -67,6 +97,7 @@ const Hero = () => {
             variant="outline"
             size="lg"
             className="px-8 py-6 text-lg rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            onClick={() => window.open('https://github.com/kedharvishnu20/kedharvishnu20/blob/main/Resume.pdf', '_blank')}
           >
             <Download className="mr-2 h-5 w-5" />
             Download Resume
