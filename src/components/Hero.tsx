@@ -63,7 +63,7 @@ const Hero = () => {
             >
               {showBitmoji ? (
                 <img 
-                  src="public/bitmoji.jpg" 
+                  src="/bitmoji.jpg" 
                   alt="Kedhar's Bitmoji" 
                   className="w-28 h-28 rounded-full object-cover"
                 />
